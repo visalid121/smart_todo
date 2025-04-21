@@ -1,1 +1,65 @@
-API key= c84641dacf554f44b29926811e9a4399
+# 🧠 Smart Todo List with AI Suggestions
+
+A productivity app powered by AI — suggests daily tasks based on your habits, time of day, and even the weather!
+
+---
+
+## 📦 Tech Stack
+
+- **Backend:** FastAPI (Python)
+- **Frontend:** Streamlit
+- **AI Model:** DeepSeek (via AIML API)
+- **Database:** SQLite (SQLAlchemy)
+- **Architecture:** Model–Context–Protocol (MCP)
+
+---
+
+## 🚀 Features
+
+- ✅ Add and manage your todo tasks
+- 💡 AI-generated daily suggestions
+- 📅 Time-aware and weather-aware planning
+- 🔄 FastAPI REST endpoints
+- 🖥️ Clean Streamlit UI
+- 🔐 API key stored securely via `.env`
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Clone this repo
+
+```bash
+git clone https://github.com/yourusername/smart-todo-ai.git
+cd smart-todo-ai
+
+2. Install dependencies
+
+pip install -r requirements.txt
+
+3. Create .env file
+
+env
+
+AIMLAPI_KEY=your_actual_aiml_api_key_here
+
+4. Start the FastAPI server
+
+uvicorn main:app --reload
+Visit: http://127.0.0.1:8000/docs to test API.
+
+5. Run the Streamlit frontend
+
+streamlit run frontend/app.py
+
+📐 Architecture: MCP
+
+This project is designed using the Model–Context–Protocol (MCP) architectural pattern.
+
+Model: Task model (SQLAlchemy) and AI logic (generate_suggestion)
+
+Context: Input from user (task list), weather, time of day
+
+Protocol: API endpoints define system rules for adding tasks and generating suggestions
+
+
